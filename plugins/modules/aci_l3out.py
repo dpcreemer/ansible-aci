@@ -318,7 +318,7 @@ def main():
         if "eigrp" not in l3protocol and asn is not None:
             module.warn("Parameter 'asn' is only applicable when l3protocol is 'eigrp'. The ASN will be ignored")
 
-    enforce_ctrl = ""
+    enforce_ctrl = "export"
     if enforceRtctrl is not None:
         if len(enforceRtctrl) == 1 and enforceRtctrl[0] == "import":
             aci.fail_json("The route_control parameter is invalid: allowed options are export or import,export only")
